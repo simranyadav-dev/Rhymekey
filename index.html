@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhymekey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-header">
+        <div class="game-title"> Rhymekey</div>
+        <div class="theme-controls">
+            <div class="theme-dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    🎨 Themes <span id="dropdownArrow">▼</span>
+                </button>
+                <div class="dropdown-content" id="themeDropdown">
+                    <div class="theme-option" onclick="setTheme('yellow')">
+                        <span>Sun Yellow</span>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #FFD93D, #FFA500);"></div>
+                    </div>
+                    <div class="theme-option" onclick="setTheme('coral')">
+                        <span>Coral Red</span>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #FF6B6B, #FF4757);"></div>
+                    </div>
+                    <div class="theme-option" onclick="setTheme('green')">
+                        <span>Fresh Green</span>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #6BCB77, #4ECDC4);"></div>
+                    </div>
+                    <div class="theme-option" onclick="setTheme('blue')">
+                        <span>Sky Blue</span>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #4D96FF, #3742FA);"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="mode-toggle" onclick="toggleDarkMode()">
+                <span id="modeIcon">🌙</span> <span id="modeText"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="menu" id="menu">
+            <h1>🎮 Rhymekey</h1>
+            <p style="margin-bottom: 20px;">Type the falling words before they hit the bottom!</p>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="showInstructions()">Instructions</button>
+        </div>
+        
+        <div class="header" style="display: none;" id="header">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="level">Level <span id="level">1</span></div>
+            <div class="lives" id="lives">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+        </div>
+        
+        <div class="game-area" id="gameArea"></div>
+        
+        <div class="input-area" style="display: none;" id="inputArea">
+            <div class="input-display" id="inputDisplay">Start typing...</div>
+            <input type="text" class="type-input" id="typeInput" placeholder="Type here..." autocomplete="off" autocorrect="off" spellcheck="false">
+        </div>
+    </div>
+      <div class="footer">
+        <p>&copy; 2025 Rhymekey| Made with ❤️ by <a href="#" >SIMRAN YADAV</a> | All Rights Reserved</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
